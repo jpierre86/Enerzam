@@ -47,6 +47,7 @@ header{
   display: flex;
   flex: 1;
   justify-content: space-between;
+  max-width: 29rem;
 }
 .header-nav .header-item {
   position: relative;
@@ -87,9 +88,6 @@ header{
   transform: translateX(calc(-100% - 50px)) !important;
 }
 @media screen and (min-width: 900px) {
-  header {
-    gap: 23rem;
-  }
   .header-nav .header-item:hover {
     color: var(--primary-blue);
   }

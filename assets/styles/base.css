@@ -3,8 +3,8 @@
 
 /* Resetting default styles */
 :root {
-  --page-width: 1200px;
-  --page-width-small: 1000px;
+  --page-width: 1000px;
+  --page-width-small: 800px;
   --left-right-padding: 2rem;
   --bg: #fff;
   --bg-blue: #042936;
@@ -42,9 +42,9 @@ h1 {
 h2 {
   color: var(--heading-txt-color);
   font-family: var(--heading-font);
-  font-size: 2.7rem;
+  font-size: 1.5rem;
   margin-bottom: 0.7rem;
-  font-weight: 400;
+  font-weight: 800;
 }
 h3 {
   color: var(--heading-txt-color);
@@ -65,11 +65,37 @@ p {
   margin-bottom: 0.5rem;
   font-size: 0.7rem;
 }
-.emphasize {
-  color: var(--primary-color) !important;
+.blue-emphasize {
+  color: var(--primary-blue) !important;
+}
+.green-emphasize {
+  color: var(--primary-green) !important;
 }
 .italic {
   font-style: italic;
+}
+.bold {
+  font-weight: 700;
+}
+.metric {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.tag {
+  background-color: #eaeaea;
+  width: fit-content;
+}
+.tag:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+}
+.green.tag:after {
+  background-color: var(--primary-green);
+}
+.blue.tag:after {
+  background-color: var(--primary-blue);
 }
 a, a:visited {
   display: block;
@@ -186,8 +212,23 @@ section {
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
+}
+.flex-center {
   justify-content: center;
   align-items: center;
+}
+.col3-flex-item {
+  width: 30%;
+}
+@media screen and (max-width: 700px) {
+  .col3-flex-item {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .col3-flex-item {
+    width: 90%;
+  }
 }
 .center-me {
   margin-left: auto;
