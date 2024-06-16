@@ -1,0 +1,115 @@
+.header-container {
+  position: fixed;
+  top: 0; 
+  padding: 0.6rem 0;
+  transition: top 0.3s ease-in-out;
+  z-index: 3;
+}
+.header-background {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+header{
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 var(--left-right-padding);
+}
+.logo {
+  max-width: 100%;
+  width: auto;
+  height: 100px;
+}
+.big-logo {
+  height: 150px !important;
+}
+.logo object {
+  width: 95%;
+  height: 95%;
+}
+.header-icon {
+  display: none;
+  background: url(../images/icons/hamburger.svg) no-repeat center;
+  min-width: 3rem;
+  min-height: 3rem;
+  height: 100%;
+  cursor: pointer;
+}
+.close-icon {
+  background: url(../images/icons/close.svg) no-repeat center !important;
+  min-width: 3rem;
+  min-height: 3rem;
+  margin: 2.1rem 1rem;
+  cursor: pointer;
+}
+.header-nav-desktop {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.header-nav .header-item {
+  position: relative;
+  font-size: 0.9rem;
+  color: inherit;
+  padding-bottom: 0.9rem;
+  transition: .2s ease;
+}
+.header-nav .active-header:after, .header-nav .active-mobile-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--primary-blue);
+  height: 3px;
+}
+.header-nav .active-header:after {   
+  bottom: -1rem;
+  width: 100%;
+}
+.header-nav .active-mobile-header:after {
+  width: 1rem;
+}
+.header-nav-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  left: calc(100vw + 50px);
+  height: 100vh;
+  width: 70%;
+  background-color: var(--bg);
+  box-shadow: 0px 0px 44px 20px rgba(0, 0, 0, 0.5);
+  transition: all .45s cubic-bezier(.29,.63,.44,1);
+  z-index: 4;
+}
+.open-nav {
+  transform: translateX(calc(-100% - 50px)) !important;
+}
+@media screen and (min-width: 900px) {
+  header {
+    gap: 23rem;
+  }
+  .header-nav .header-item:hover {
+    color: var(--primary-blue);
+  }
+}
+/* Hamburger Menu */
+@media screen and (max-width: 900px) {
+  .header-icon {
+      display: block;
+  }
+  .header-nav .header-item {
+      padding: 1.2rem 3rem;
+      color: var(--txt-color);
+  }
+  .header-nav-desktop {
+      display: none;
+  }
+  .header-nav-mobile { 
+      display: flex;
+  }
+  .header-nav .active-mobile-header {
+    color: var(--primary-blue);
+  }
+}
