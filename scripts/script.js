@@ -132,3 +132,34 @@ function animate() {
   }
 
 }
+
+/**
+ * Functions for slider 
+ */
+const slider = document.getElementById('slider');
+const slide = slider.getElementsByTagName('div');
+const prevSlider = document.getElementById('prevSlider');
+const nextSlider = document.getElementById('nextSlider');
+
+prevSlider.addEventListener('click', () => {
+  
+  if (screen.width < 768)
+    slider.scrollLeft = slider.scrollLeft - (screen.width/2);
+  else
+    slider.scrollLeft = slider.scrollLeft - (screen.width/4);
+  
+  if (slider.scrollLeft == 0)
+    slider.scrollLeft += slider.scrollWidth - slider.clientWidth;
+
+});
+nextSlider.addEventListener('click', () => {
+
+  if (screen.width < 768)
+    slider.scrollLeft = slider.scrollLeft + (screen.width/2);
+  else
+    slider.scrollLeft = slider.scrollLeft + (screen.width/4);
+
+  if (slider.scrollLeft == (slider.scrollWidth - slider.clientWidth))
+    slider.scrollLeft -= slider.scrollLeft;
+  
+});
