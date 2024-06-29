@@ -4,6 +4,7 @@
   padding: 0.6rem 0;
   transition: top 0.3s ease-in-out;
   z-index: 3;
+  transition: 0.3s;
 }
 .header-background {
   background: rgba(0, 0, 0, 0.6);
@@ -48,6 +49,23 @@ header{
   flex: 1;
   justify-content: space-between;
   max-width: 29rem;
+}
+.header-nav .dropdown-container {
+  position: relative;
+}
+.header-nav .dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 200%;
+  padding: 1rem;
+  color: var(--primary-gray);
+  background: var(--bg-gray);
+  transition: 0.3s;
+}
+.header-nav .dropdown-container:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
 }
 .header-nav .header-item {
   position: relative;
