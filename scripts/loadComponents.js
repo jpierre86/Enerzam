@@ -1,5 +1,5 @@
 function loadContent() {
-const basePath = window.location.pathname.includes('/ShilohRodrigues/') ? '/Enerzam/' : '../';
+const basePath = window.location.pathname.includes('Enerzam/') ? '/Enerzam/' : '../';
   fetch(basePath + 'components/header.html')
       .then(response => response.text())
       .then(data => {
