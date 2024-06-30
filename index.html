@@ -5,42 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/styles/base.css">
-  <link rel="stylesheet" href="./assets/styles/header.css">
-  <link rel="stylesheet" href="./assets/styles/footer.css">
   <link rel="stylesheet" href="./assets/styles/slider.css">
-  <!-- Scripts -->
+  <!-- Scripts --> 
+  <script src="./scripts/loadComponents.js" defer></script>
   <script src="./scripts/script.js" defer></script>
   <title>Enerzam | Unique Solutions for Energy Efficiency</title>
 </head>
 <body>
-  <div id="headerContainer" class="full-width grid-center header-container">
-    <header class="page-width">
-      <a href="./" aria-label="Click to return to home page">
-        <object class="logo" data="./assets/images/logos/enerzam-hz-color_en.svg" title="Company Logo" alt="Company Logo">Home page</object>
-      </a>
-      <div id="hamburgerMenu" class="header-icon"> </div>
-      <nav id="desktopNav" class="header-nav header-nav-desktop invert-txt">
-        <div class="dropdown-container">
-          <a href="./pages/about-us.html" class="header-item">About us</a>
-          <div class="dropdown">
-            <a href="./pages/about-us.html" class="header-item">Our Mission</a>
-            <a href="./pages/about-us.html" class="header-item">Our Vision</a>
-            <a href="./pages/about-us.html" class="header-item">Our Team</a>
-          </div>
-        </div>        
-        <a href="./pages/tech-division.html" class="header-item">Technology Division</a>
-        <a href="./pages/building-eng.html" class="header-item">Building Engineering</a>  
-        <a href="#" class="header-item">FR</a>   
-      </nav>
-    </header>
-  </div>
-  <nav id="mobileNav" class="header-nav header-nav-mobile">
-    <div id="closeMenu" class="close-icon"> </div>
-    <a href="./pages/about-us.html" class="header-item">About us</a>
-    <a href="./pages/tech-division.html" class="header-item">Technology Division</a>
-    <a href="./pages/building-eng.html" class="header-item">Building Engineering</a>  
-    <a href="#" class="header-item">FR</a>   
-  </nav>
+  
+  <div id="header"></div>
 
   <div id="banner" class="img-banner main-banner full-width grid-center">
     <div class="banner-content page-width-small grid-center fade-in">
@@ -125,62 +98,8 @@
       </div>
     </section>  
   </main>
-  <section id="footer" class="full-width gray-bg grid-center">
-    <footer class="page-width grid gap">
-      <div class="footer-block footer-logo">
-        <a href="./" aria-label="Click to return to home page">
-          <object class="logo big-logo" data="./assets/images/logos/enerzam-vt-black_en.svg" alt="Company Logo" title="Company Logo"></object>
-        </a>
-        <p>EnerZam is one of the experts in eco-responsible business practices and clean technologies listed in the Ecoleader Fund directory. As such, our services could be financed within the framework of a project submitted to the financing program of the Ecoleader Fund.</p>
-        <div class="header-item social-links">
-          <a class="social-link" href="https://www.linkedin.com/company/enerzam-inc/" target="_blank"><img src="./assets/images/icons/linkedin.svg" alt="linkedin logo" width="32" height="32"></a>
-        </div>
-      </div>     
-      <div class="footer-block">
-        <h3>Quick Links</h3>
-        <nav class="highlight blue">
-          <a href="./" class="footer-item">Home</a>
-          <a href="./" class="footer-item">About us</a>
-          <a href="./" class="footer-item">Technology Division</a> 
-          <a href="./" class="footer-item">Market</a>  
-          <a href="./" class="footer-item">Building Engineering</a>         
-        </nav>
-      </div>
-      <div class="footer-block">
-        <h3>Product Suite</h3>
-        <nav class="highlight green">
-          <a href="./" class="footer-item">Joule M&V</a>
-          <a href="./" class="footer-item">Joule AnalytiX</a>
-          <a href="./" class="footer-item">WebSynco</a> 
-        </nav>
-      </div>
-      <div class="footer-block">
-        <h3>Contact Us</h3>
-        <div class="contact-footer highlight gray">
-          <div>
-            <p class="bold">Montréal Location:</p>
-            <p>Cité du multimédia<br>50 Queen St, Suite #204<br>Montreal, QC<br>Canada, H3C 2N5</p>
-            <p>+1 (514) 360-9926</p>
-          </div>
-          <div>
-            <p class="bold">Toronto Location:</p>
-            <p>45 Sheppard Ave East, Suite #930<br>Toronto, ON<br>Canada, M2N 5W9</p>
-            <p>+1 (416) 901-9942</p>
-          </div>
-          <div>
-            <p>Toll Free: +1 (877) 682-8749<br><span class="bold">info@enerzam.com</span></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </section>
-  <div class="full-width grid-center gray-bg">
-    <div class="page-width grid-center copyright">
-      <p><script>document.write(new Date().getFullYear())</script> Copyright © EnerZam inc. All Rights Reserved</p>
-      <div class="uclogo-container">
-        <object class="logo uclogo" data="./assets/images/logos/UCtriX_01.svg" alt="Company Logo" title="Company Logo"></object>
-      </div>
-    </div>     
-  </div>
+  
+  <div id="footer"></div>
+
 </body>
 </html>
