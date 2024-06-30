@@ -8,6 +8,7 @@
   --left-right-padding: 1rem;
   --bg: #fff;
   --bg-blue: #042936;
+  --bg-light-blue: #65b5cf;
   --bg-green: #8dac6f;
   --bg-gray: #e0e0e0;
   --primary-green: #74bc2c;
@@ -36,7 +37,7 @@ html, body{
 }
 h1 {
   font-family: var(--heading-font);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: 2rem;
   letter-spacing: 1.5px;
@@ -118,7 +119,10 @@ object {
   padding: 0.2rem 2rem;
 }
 .invert-txt {
-  color: #fff;
+  color: #fff !important;
+}
+.black-txt {
+  color: #000 !important;
 }
 
 /* General section styles */
@@ -137,7 +141,6 @@ section {
 .primary-bg {
   background: var(--bg);
   color: var(--txt-color);
-  padding: 1rem;
 }
 .secondary-bg {
   background: var(--bg-blue);
@@ -146,6 +149,10 @@ section {
 .gray-bg {
   background: var(--bg-gray);
   color: var(--primary-gray);
+}
+.blue-bg {
+  background: var(--bg-light-blue);
+  color: #fff;
 }
 .page-width {
   width: 100%;
@@ -170,6 +177,9 @@ section {
 .gap {
   gap: 2rem;
 }
+.gap-4 {
+  gap: 4rem;
+}
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -180,6 +190,9 @@ section {
 }
 .space-around {
   justify-content: space-around;
+}
+.space-between {
+  justify-content: space-between;
 }
 .col3-flex-item {
   width: 30%;
@@ -223,6 +236,9 @@ section {
 }
 .fade-in-animate {
   opacity: 1;
+}
+.color-blue {
+  color: var(--primary-blue);
 }
 .tagline {
   max-width: fit-content;
@@ -285,6 +301,7 @@ section {
   border-bottom-left-radius: 55px;
   border-bottom-right-radius: 55px;
   box-shadow: 0px 5px 10px 4px rgba(54, 54, 54, 0.5);
+  background-color: #fff;
   z-index: 2;
 }
 .banner-content {
@@ -297,6 +314,17 @@ section {
   max-width: min(550px, 90%);
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
+}
+.offset-bg:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  background-color: var(--bg-light-blue);
+  z-index: -1;
 }
 
 /* Building background banner */
@@ -337,4 +365,20 @@ main {
 .phone:before {
   content: url(../images/icons/phone.svg);
   display: block;
+}
+
+/* Img with text styles */
+.img-w-txt img {
+  height: auto;
+  width: 400px;
+  max-width: 90%;
+}
+.img-w-txt .sml-img {
+  width: 250px;
+  padding: 1.5rem 0;
+}
+.img-w-txt .txt {
+  flex: 1;
+  min-width: 40%;
+  max-width: 600px;
 }
