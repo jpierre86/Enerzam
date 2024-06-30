@@ -1,5 +1,6 @@
 function loadContent() {
 const basePath = window.location.pathname.includes('Enerzam/') ? '/Enerzam/' : '../';
+console.log(window.location.pathname);
   fetch(basePath + 'components/header.html')
       .then(response => response.text())
       .then(data => {
