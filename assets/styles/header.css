@@ -81,8 +81,7 @@ header{
   background-color: var(--primary-blue);
   height: 3px;
 }
-.header-nav .active-header:after {   
-  bottom: -1rem;
+.header-nav .active-header:after {  
   width: 100%;
 }
 .header-nav .active-mobile-header:after {

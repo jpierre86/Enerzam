@@ -6,7 +6,7 @@
   --page-width: 1200px;
   --page-width-small: 800px;
   --left-right-padding: 1rem;
-  --bg: #fff;
+  --bg: #f0f0f0;
   --bg-blue: #042936;
   --bg-light-blue: #65b5cf;
   --bg-green: #8dac6f;
@@ -59,9 +59,6 @@ h3 {
   h1 {
     font-size: 1.1rem;
     line-height: 1.4rem;
-  }
-  h2 {
-    font-size: 1.2rem;
   }
 }
 p {
@@ -162,6 +159,7 @@ section {
 .page-width-small {
   width: 100%;
   max-width: var(--page-width-small);
+  padding: 0 var(--left-right-padding);
 }
 .grid {
   display: grid;
@@ -301,7 +299,7 @@ section {
   border-bottom-left-radius: 55px;
   border-bottom-right-radius: 55px;
   box-shadow: 0px 5px 10px 4px rgba(54, 54, 54, 0.5);
-  background-color: #fff;
+  background-color: var(--bg);
   z-index: 2;
 }
 .banner-content {
@@ -309,8 +307,6 @@ section {
   position: relative;
 }
 .banner-text {
-  position: absolute;
-  top: 30%;
   max-width: min(550px, 90%);
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
@@ -365,6 +361,21 @@ main {
 .phone:before {
   content: url(../images/icons/phone.svg);
   display: block;
+}
+@media screen and (max-width: 768px) {
+  .map {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .map iframe {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .map-container {
+    justify-content: space-around;
+  }
 }
 
 /* Img with text styles */
