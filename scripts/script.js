@@ -49,30 +49,77 @@ function animate() {
 /**
  * Functions for slider 
  */
-const slider = document.getElementById('slider');
-const slide = slider.getElementsByTagName('div');
-const prevSlider = document.getElementById('prevSlider');
-const nextSlider = document.getElementById('nextSlider');
+try {
 
-prevSlider.addEventListener('click', () => {
-  
-  if (screen.width < 768)
-    slider.scrollLeft = slider.scrollLeft - (screen.width/2);
-  else
-    slider.scrollLeft = slider.scrollLeft - (screen.width/4);
-  
-  if (slider.scrollLeft == 0)
-    slider.scrollLeft += slider.scrollWidth - slider.clientWidth;
+  const slider = document.getElementById('slider');
+  const slide = slider.getElementsByTagName('div');
+  const prevSlider = document.getElementById('prevSlider');
+  const nextSlider = document.getElementById('nextSlider');
 
-});
-nextSlider.addEventListener('click', () => {
+  prevSlider.addEventListener('click', () => {
+    
+    if (screen.width < 768)
+      slider.scrollLeft = slider.scrollLeft - (screen.width/2);
+    else
+      slider.scrollLeft = slider.scrollLeft - (screen.width/4);
+    
+    if (slider.scrollLeft == 0)
+      slider.scrollLeft += slider.scrollWidth - slider.clientWidth;
 
-  if (screen.width < 768)
-    slider.scrollLeft = slider.scrollLeft + (screen.width/2);
-  else
-    slider.scrollLeft = slider.scrollLeft + (screen.width/4);
+  });
+  nextSlider.addEventListener('click', () => {
 
-  if (slider.scrollLeft == (slider.scrollWidth - slider.clientWidth))
-    slider.scrollLeft -= slider.scrollLeft;
-  
-});
+    if (screen.width < 768)
+      slider.scrollLeft = slider.scrollLeft + (screen.width/2);
+    else
+      slider.scrollLeft = slider.scrollLeft + (screen.width/4);
+
+    if (slider.scrollLeft == (slider.scrollWidth - slider.clientWidth))
+      slider.scrollLeft -= slider.scrollLeft;
+    
+  });
+}
+catch {
+
+}
+
+
+/**
+ * Functions for animated Our Team section
+ */
+const teamCards = document.getElementsByClassName('card')
+let cardOpen = false;
+let openCardIndex = null;
+
+for (let i = 0; i < teamCards.length; i++) {
+  teamCards[i].addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!cardOpen) {
+      const current = teamCards[i].getElementsByClassName('info-card')[0]
+      current.classList.add('show');
+      current.classList.remove('hidden');
+      cardOpen = true;
+      openCardIndex = i;
+    } 
+    else if (cardOpen && openCardIndex === i) {
+      // If clicking the same open card, close it
+      const current = teamCards[i].getElementsByClassName('info-card')[0]
+      current.classList.remove('show');
+      current.classList.add('hidden');
+      cardOpen = false;
+      openCardIndex = null;
+    }
+  });
+}
+
+window.addEventListener('click', () => {
+  for (let i = 0; i < teamCards.length; i++) {
+      if (cardOpen) {
+        const current = teamCards[i].getElementsByClassName('info-card')[0]
+        current.classList.remove('show');
+        current.classList.add('hidden');
+        cardOpen = false;
+        openCardIndex = null;
+      }
+  }
+})

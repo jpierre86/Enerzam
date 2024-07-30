@@ -178,6 +178,9 @@ section {
 .gap-4 {
   gap: 4rem;
 }
+.flex {
+  display: flex;
+}
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -196,6 +199,9 @@ section {
   width: 30%;
 }
 @media screen and (max-width: 700px) {
+  .unflex-mobile {
+    display: block !important;
+  }
   .col3-flex-item {
     width: 60%;
   }
@@ -235,6 +241,9 @@ section {
 .fade-in-animate {
   opacity: 1;
 }
+.hidden { 
+  display: none;
+}
 .color-blue {
   color: var(--primary-blue);
 }
@@ -248,6 +257,9 @@ section {
   background-color: var(--primary-green);
   height: 0.2rem;
   width: 100%;
+}
+.tagline-blue:after {
+  background-color: var(--primary-blue);
 }
 .blue:before {
   background-color: var(--primary-blue) !important;
@@ -392,4 +404,55 @@ main {
   flex: 1;
   min-width: 40%;
   max-width: 600px;
+}
+
+/* Team grid styles */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.team-grid .card {
+  width: 250px;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+.team-grid .info-card.show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90vw;
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #000;
+  z-index: 1000;
+}
+.team-grid .card img {
+  transition: all 0.15s ease-in-out;
+}
+.team-grid .card:hover img:not(.info-card img) {
+  scale: 1.02;
+}
+.team-grid .card:hover .name:not(.info-card .name) {
+  text-decoration: underline;
+}
+.team-grid .card p {
+  margin: 0.2rem 0;
+}
+.team-grid .info-card p {
+  margin: 1rem 0;
+}
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.position {
+  font-size: 0.9rem;
+}
+.quote {
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-style: italic;
 }
