@@ -114,7 +114,7 @@ for (let i = 0; i < teamCards.length; i++) {
 
 window.addEventListener('click', () => {
   for (let i = 0; i < teamCards.length; i++) {
-      if (cardOpen) {
+      if (cardOpen && openCardIndex == i) {
         const current = teamCards[i].getElementsByClassName('info-card')[0]
         current.classList.remove('show');
         current.classList.add('hidden');

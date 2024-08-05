@@ -9,6 +9,7 @@
   --bg: #f0f0f0;
   --bg-blue: #042936;
   --bg-light-blue: #65b5cf;
+  --bg-mid-blue: #7595a5;
   --bg-green: #8dac6f;
   --bg-gray: #e0e0e0;
   --primary-green: #74bc2c;
@@ -37,7 +38,7 @@ html, body{
 }
 h1 {
   font-family: var(--heading-font);
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 600;
   line-height: 2rem;
   letter-spacing: 1.5px;
@@ -56,14 +57,17 @@ h3 {
   font-weight: 400;
 }
 @media screen and (max-width: 490px) {
-  h1 {
+  h2.shrink {
     font-size: 1.1rem;
     line-height: 1.4rem;
+  }
+  p {
+    font-size: 0.85rem !important;
   }
 }
 p {
   margin-bottom: 1rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .italic {
   font-style: italic;
@@ -126,6 +130,9 @@ object {
 section {
   padding: 5rem 0;
 }
+.big-section {
+  padding: 8rem 0;
+}
 .small-section {
   padding: 0.5rem 0;
 }
@@ -150,6 +157,13 @@ section {
 .blue-bg {
   background: var(--bg-light-blue);
   color: #fff;
+}
+.mid-blue-bg {
+  background: var(--bg-mid-blue);
+  color: #fff;
+}
+.conic-bg {
+  background: conic-gradient(from 120deg, #e0e0e0, #ededed);
 }
 .page-width {
   width: 100%;
@@ -290,6 +304,22 @@ section {
   background-color: var(--primary-color);
   margin: 2rem 0;
 }
+.fancy-div {
+  border: solid 4px #40569e;
+  padding: 2rem;
+  position: relative;
+}
+.fancy-div h2 {
+  line-height: 1.6rem;
+  position: absolute;
+  top: calc((1.6rem)/2 * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+  padding: 0 1rem;
+  margin: 0;
+  background: linear-gradient(to right, #e7e7e7 0%, #ededed 100%);
+}
 
 /* Banner styles */
 .img-banner {
@@ -307,7 +337,6 @@ section {
 .main-banner {
   position: relative;
   height: 800px;
-  max-height: 100vh;
   border-bottom-left-radius: 55px;
   border-bottom-right-radius: 55px;
   box-shadow: 0px 5px 10px 4px rgba(54, 54, 54, 0.5);
@@ -333,6 +362,9 @@ section {
   height: 115%;
   background-color: var(--bg-light-blue);
   z-index: -1;
+}
+.mid-blue-bg.offset-bg:before {
+  background-color: var(--bg-mid-blue) !important;
 }
 
 /* Building background banner */
@@ -412,7 +444,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
 }
-.team-grid .card {
+.team-grid .card:not(.info-card) {
   width: 250px;
   padding: 2rem 0;
   cursor: pointer;
@@ -425,7 +457,7 @@ main {
   width: 600px;
   max-width: 90vw;
   background-color: #fff;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   box-shadow:
   1px 2px 8px hsla(0, 0%, 0%, 0.333);
   z-index: 1000;
@@ -438,6 +470,16 @@ main {
 }
 .team-grid .card:hover .name:not(.info-card .name) {
   text-decoration: underline;
+}
+.team-grid .info-card:after {
+  content: url(/assets/images/icons/close.svg);
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }
 .team-grid .card p {
   margin: 0.2rem 0;
