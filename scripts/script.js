@@ -123,3 +123,30 @@ window.addEventListener('click', () => {
       }
   }
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuContainer = document.getElementById('slide-menu');
+  const menuItems = menuContainer.getElementsByClassName('menu-item');
+  const slides = document.getElementsByClassName('slide');
+
+  for (let item of menuItems) {
+      item.addEventListener('click', function() {
+          // Remove 'active' class from all menu items
+          for (let otherItem of menuItems) {
+              otherItem.classList.remove('active');
+          }
+
+          // Add 'active' class to the clicked item
+          this.classList.add('active');
+
+          // Hide all slides
+          for (let slide of slides) {
+              slide.classList.remove('active');
+          }
+
+          // Show the corresponding slide with a fade-in effect
+          const slideId = this.getAttribute('data-slide');
+          document.getElementById(slideId).classList.add('active');
+      });
+  }
+})

@@ -64,6 +64,9 @@ footer .footer-block p {
 .big-logo {
   height: 150px !important;
 }
+.small-logo {
+  height: 70px !important;
+}
 .logo object {
   width: 95%;
   height: 95%;
