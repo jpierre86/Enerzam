@@ -79,6 +79,10 @@ p {
   margin-bottom: 1rem;
   font-size: 0.95rem;
 }
+img {
+  height: auto;
+  width: 100%;
+}
 .italic {
   font-style: italic;
 }
@@ -148,6 +152,9 @@ section {
 }
 .med-section {
   padding: 2rem 0;
+}
+.no-padding {
+  padding: 0;
 }
 .full-width {
   width: 100%;
@@ -404,8 +411,18 @@ section {
 }
 .banner-text {
   max-width: min(550px, 90%);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 2rem;
+}
+.banner-text-large {
+  max-width: min(750px, 90%);
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 2rem 4rem 2rem 2rem;
+}
+@media screen and (max-width: 900px) {
+  .banner-text-large {
+    padding: 2rem;
+  }
 }
 .offset-bg:before {
   content: "";
@@ -439,6 +456,21 @@ section {
   width: 100%;
   height: 110%;
   background-color: rgba(131, 172, 111, 0.9);
+}
+
+/* Joule MV Background */
+.background-image {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.joule-mv-1 {
+  background-image: url(../images/tech_div-joule_mv_section_icons.jpg);
+}
+.joule-mv-2 {
+  background-image: url(../images/building-banner.webp);
 }
 
 /* Main Styles */
@@ -565,7 +597,13 @@ main {
 
 /* Slideshow Styles */
 .menu-item.active, .menu-item:hover {
-  font-weight: 700;
+  font-weight: 800;
+}
+.menu-item.active:first-of-type {
+  color: #eac657;
+}
+.menu-item.active {
+  color: #3a519a;
 }
 #slide-menu {
   display: flex;
@@ -577,6 +615,7 @@ main {
 }
 #slide-menu .menu-item {
   cursor: pointer;
+  font-size: 1.2rem;
 }
 .slide-content {
   position: relative;
@@ -598,4 +637,46 @@ main {
   height: 70px;
   width: 70px;
   margin-right: 1rem;
+}
+
+/** Utility Grid **/
+.utility-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.utility-grid .utility {
+  position: relative;
+  width: 30%;
+  min-width: 250px;
+  height: 150px;
+}
+.utility > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg);
+}
+.utility-grid .img {
+  max-width: 90px;
+}
+.utility-grid .description {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+  background-color: var(--bg);
+}
+.utility:hover .description {
+  opacity: 1;
+  visibility: visible;
 }
