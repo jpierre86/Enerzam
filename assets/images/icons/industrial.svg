@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="industrial" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6bd3a;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke: #231f20;
+      }
+
+      .cls-3, .cls-4, .cls-6, .cls-8, .cls-7 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4, .cls-8 {
+        stroke-width: 5px;
+      }
+
+      .cls-3, .cls-6, .cls-8, .cls-7 {
+        fill: none;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+
+      .cls-6 {
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        fill: #32baec;
+      }
+
+      .cls-8 {
+        stroke: #a6bd3a;
+      }
+
+      .cls-7 {
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-5" cx="288" cy="288" r="266.71"/>
+  <g>
+    <rect class="cls-8" x="156.86" y="367.29" width="44.6" height="71.16"/>
+    <rect class="cls-8" x="292.61" y="367.29" width="35.35" height="71.16"/>
+    <rect class="cls-8" x="353.55" y="367.29" width="35.35" height="71.16"/>
+    <polyline class="cls-6" points="121.41 438.45 124.98 116.16 236.91 115.54 236.91 407.64"/>
+    <polyline class="cls-6" points="241.97 292.74 451.29 292.74 451.29 438.45"/>
+    <line class="cls-7" x1="96.29" y1="438.45" x2="479.71" y2="438.45"/>
+    <g>
+      <polyline class="cls-3" points="170.36 154.13 144.99 154.13 144.99 177.7"/>
+      <polyline class="cls-2" points="175.44 158.88 150.07 158.88 150.07 182.45"/>
+      <polyline class="cls-3" points="213.9 154.13 188.53 154.13 188.53 177.7"/>
+      <polyline class="cls-2" points="218.98 158.88 193.61 158.88 193.61 182.45"/>
+      <polyline class="cls-3" points="170.36 206.9 144.99 206.9 144.99 230.48"/>
+      <polyline class="cls-2" points="175.44 211.65 150.07 211.65 150.07 235.22"/>
+      <polyline class="cls-3" points="213.9 206.9 188.53 206.9 188.53 230.48"/>
+      <polyline class="cls-2" points="218.98 211.65 193.61 211.65 193.61 235.22"/>
+      <polyline class="cls-3" points="170.36 264.42 144.99 264.42 144.99 287.99"/>
+      <polyline class="cls-2" points="175.44 269.17 150.07 269.17 150.07 292.74"/>
+      <polyline class="cls-3" points="213.9 264.42 188.53 264.42 188.53 287.99"/>
+      <polyline class="cls-2" points="218.98 269.17 193.61 269.17 193.61 292.74"/>
+      <polyline class="cls-3" points="170.36 323.63 144.99 323.63 144.99 347.2"/>
+      <polyline class="cls-2" points="175.44 328.37 150.07 328.37 150.07 351.94"/>
+      <polyline class="cls-3" points="213.9 323.63 188.53 323.63 188.53 347.2"/>
+      <polyline class="cls-2" points="218.98 328.37 193.61 328.37 193.61 351.94"/>
+    </g>
+    <polyline class="cls-3" points="380.62 322.44 355.25 322.44 355.25 346.01"/>
+    <polyline class="cls-2" points="385.7 327.19 360.33 327.19 360.33 350.76"/>
+    <polyline class="cls-3" points="427.07 322.44 401.7 322.44 401.7 346.01"/>
+    <polyline class="cls-2" points="432.14 327.19 406.77 327.19 406.77 350.76"/>
+    <polyline class="cls-3" points="282.11 322.44 256.74 322.44 256.74 346.01"/>
+    <polyline class="cls-2" points="287.19 327.19 261.82 327.19 261.82 350.76"/>
+    <polyline class="cls-3" points="329.1 322.44 303.73 322.44 303.73 346.01"/>
+    <polyline class="cls-2" points="334.18 327.19 308.81 327.19 308.81 350.76"/>
+    <line class="cls-6" x1="236.91" y1="273.56" x2="470.81" y2="273.56"/>
+    <line class="cls-6" x1="451.29" y1="301.05" x2="451.29" y2="273.56"/>
+    <rect class="cls-1" x="270.59" y="252.05" width="56.46" height="17.12"/>
+    <rect class="cls-3" x="266.68" y="256.44" width="56.46" height="17.12"/>
+    <rect class="cls-1" x="362.02" y="252.17" width="56.46" height="17.12"/>
+    <polygon class="cls-4" points="308.94 126.82 280.84 126.82 274.53 256.44 315.26 256.44 308.94 126.82"/>
+    <polygon class="cls-4" points="400.2 126.82 372.1 126.82 365.78 256.44 406.51 256.44 400.2 126.82"/>
+    <line class="cls-3" x1="270.59" y1="126.82" x2="319.2" y2="126.82"/>
+    <line class="cls-3" x1="361.84" y1="126.82" x2="410.46" y2="126.82"/>
+    <rect class="cls-3" x="357.92" y="256.44" width="56.46" height="17.12"/>
+  </g>
+</svg>

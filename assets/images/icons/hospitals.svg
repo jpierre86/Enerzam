@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hospitals" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6bd3a;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        stroke-width: 5px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #231f20;
+      }
+
+      .cls-3, .cls-4, .cls-7, .cls-6 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-4, .cls-7 {
+        stroke-width: 7.92px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+
+      .cls-2 {
+        fill: #32baec;
+      }
+
+      .cls-7 {
+        stroke: #a6bd3a;
+      }
+
+      .cls-6 {
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-5" cx="288" cy="288" r="266.71"/>
+  <g>
+    <polyline class="cls-4" points="189.43 225.66 110.55 225.66 110.55 415.52 470.1 415.52 470.1 225.66 386.63 225.66"/>
+    <polyline class="cls-7" points="277.48 415.52 277.48 363.93 268.49 363.93 268.49 363.93 309.47 363.93 309.47 363.93 302.25 363.93 302.25 415.52"/>
+    <polyline class="cls-4" points="257.99 174.3 175.68 174.3 175.68 174.76 189.43 174.76 189.43 415.52 386.63 415.52 386.63 174.3 401.31 174.3 401.31 174.3 321.74 174.3"/>
+    <polyline class="cls-3" points="249.97 197.69 221.76 197.69 221.76 225.66"/>
+    <polyline class="cls-2" points="254.55 202.5 226.35 202.5 226.35 230.48"/>
+    <polyline class="cls-2" points="254.55 254.32 226.35 254.32 226.35 282.3"/>
+    <polyline class="cls-2" points="254.55 303.17 226.35 303.17 226.35 331.14"/>
+    <polyline class="cls-2" points="322.57 202.5 350.78 202.5 350.78 230.48"/>
+    <polyline class="cls-2" points="322.57 254.32 350.78 254.32 350.78 282.3"/>
+    <polyline class="cls-2" points="322.73 303.17 350.93 303.17 350.93 331.14"/>
+    <polyline class="cls-2" points="408.18 254.32 436.38 254.32 436.38 282.3"/>
+    <polyline class="cls-2" points="408.18 303.17 436.38 303.17 436.38 331.14"/>
+    <polyline class="cls-2" points="408.18 357.2 436.38 357.2 436.38 385.17"/>
+    <polyline class="cls-2" points="169.48 357.2 141.27 357.2 141.27 385.17"/>
+    <polyline class="cls-2" points="169.03 254.32 140.82 254.32 140.82 282.3"/>
+    <polyline class="cls-2" points="169.03 303.17 140.82 303.17 140.82 331.14"/>
+    <polyline class="cls-3" points="326.94 197.69 355.14 197.69 355.14 225.66"/>
+    <polyline class="cls-3" points="249.97 249.94 221.76 249.94 221.76 277.91"/>
+    <polyline class="cls-3" points="164.67 249.94 136.46 249.94 136.46 277.91"/>
+    <polyline class="cls-3" points="326.94 250.01 355.14 250.01 355.14 277.83"/>
+    <polyline class="cls-3" points="249.97 298.43 221.76 298.43 221.76 326.4"/>
+    <polyline class="cls-3" points="326.94 298.43 355.14 298.43 355.14 326.4"/>
+    <polyline class="cls-3" points="415.98 249.94 440.75 249.94 440.75 277.91"/>
+    <polyline class="cls-3" points="164.67 298.43 136.46 298.43 136.46 326.4"/>
+    <polyline class="cls-3" points="415.98 298.43 440.75 298.43 440.75 326.4"/>
+    <polyline class="cls-3" points="164.67 352.69 136.46 352.69 136.46 380.67"/>
+    <polyline class="cls-3" points="415.98 352.69 440.75 352.69 440.75 380.67"/>
+    <rect class="cls-2" x="280.43" y="200.19" width="27.93" height="27.93"/>
+    <rect class="cls-6" x="276.68" y="196.41" width="27.36" height="27.36"/>
+    <rect class="cls-2" x="280.43" y="252.47" width="27.93" height="27.93"/>
+    <rect class="cls-6" x="276.45" y="248.66" width="27.82" height="27.82"/>
+    <rect class="cls-2" x="280.43" y="301.32" width="27.93" height="27.93"/>
+    <rect class="cls-6" x="276.4" y="297.19" width="27.93" height="27.93"/>
+    <path class="cls-1" d="m330.12,121.22h-16.54c-1.16,0-2.11-.94-2.11-2.11v-16.54c0-1.16-.94-2.11-2.11-2.11h-22.15c-1.16,0-2.11.94-2.11,2.11v16.54c0,1.16-.94,2.11-2.11,2.11h-16.54c-1.16,0-2.11.94-2.11,2.11v22.15c0,1.16.94,2.11,2.11,2.11h16.54c1.16,0,2.11.94,2.11,2.11v16.54c0,1.16.94,2.11,2.11,2.11h22.15c1.16,0,2.11-.94,2.11-2.11v-16.54c0-1.16.94-2.11,2.11-2.11h16.54c1.16,0,2.11-.94,2.11-2.11v-22.15c0-1.16-.94-2.11-2.11-2.11Z"/>
+    <polygon class="cls-4" points="321.74 130.04 302.25 130.04 302.25 110.55 277.48 110.55 277.48 130.04 257.99 130.04 257.99 154.81 277.48 154.81 277.48 174.3 302.25 174.3 302.25 154.81 321.74 154.81 321.74 130.04"/>
+  </g>
+</svg>

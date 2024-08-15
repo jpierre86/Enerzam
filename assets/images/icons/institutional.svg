@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Institutionnal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6bd3a;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        stroke-width: 5px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #231f20;
+      }
+
+      .cls-3, .cls-4, .cls-6 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-4 {
+        stroke-width: 7.92px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+
+      .cls-2 {
+        fill: #32baec;
+      }
+
+      .cls-6 {
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-5" cx="288" cy="288" r="266.71"/>
+  <g>
+    <rect class="cls-2" x="401.89" y="241.03" width="30.27" height="165.55"/>
+    <polyline class="cls-4" points="233.57 188.07 127.17 188.07 136.8 241.03 122.36 241.03 452.55 241.03 437.95 241.03 453.54 188.07 344.04 188.07"/>
+    <rect class="cls-2" x="160.66" y="241.03" width="30.27" height="165.55"/>
+    <rect class="cls-2" x="239.85" y="241.03" width="30.27" height="165.55"/>
+    <rect class="cls-2" x="320.56" y="241.03" width="30.27" height="165.55"/>
+    <polygon class="cls-4" points="184.04 241.03 287.89 161.7 393.62 241.03 184.04 241.03"/>
+    <g>
+      <line class="cls-4" x1="287.95" y1="162.63" x2="287.95" y2="84.05"/>
+      <path class="cls-1" d="m339.87,84.07h-51.93v36.47h21.24v16.67c0,1.33,1.08,2.4,2.4,2.4h25.88c6.16,0,11.15-4.99,11.15-11.15v-35.64c0-4.83-3.92-8.75-8.75-8.75Z"/>
+      <path class="cls-4" d="m348.62,111.84v17.99c0,6.16-4.99,11.15-11.15,11.15h-25.88c-1.33,0-2.4-1.08-2.4-2.4v-18.05"/>
+      <path class="cls-4" d="m287.95,84.05h49.82c5.99,0,10.85,4.86,10.85,10.85v14.77c0,5.99-4.86,10.85-10.85,10.85h-49.82v-36.47h0Z"/>
+    </g>
+    <polygon class="cls-6" points="109.74 434.1 125.34 434.1 125.34 406.59 450.94 406.59 450.94 434.1 466.53 434.1 109.74 434.1"/>
+    <rect class="cls-3" x="153.77" y="241.03" width="30.27" height="165.55"/>
+    <rect class="cls-3" x="233.57" y="241.03" width="30.27" height="165.55"/>
+    <rect class="cls-3" x="313.77" y="241.03" width="30.27" height="165.55"/>
+    <rect class="cls-3" x="395.45" y="241.03" width="30.27" height="165.55"/>
+  </g>
+</svg>

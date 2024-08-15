@@ -42,9 +42,8 @@ html, body{
 }
 h1 {
   font-family: var(--heading-font);
-  font-size: 1.9rem;
+  font-size: 2.4rem;
   font-weight: 600;
-  line-height: 2rem;
   letter-spacing: 1.5px;
   margin-bottom: 0.8rem;
 }
@@ -65,6 +64,12 @@ h4 {
   font-size: 1.3rem;
   color: #706f6e;
   margin-bottom: 1.5rem;
+}
+h2.large {
+  font-size: 1.8rem;
+}
+.gray-txt {
+  color: #706f6e;
 }
 @media screen and (max-width: 490px) {
   h2.shrink {
@@ -385,7 +390,6 @@ section {
 
 /* Banner styles */
 .img-banner {
-  background-image: url(../images/banner-mtl.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -395,6 +399,12 @@ section {
   .img-banner {
     background-attachment: fixed;
   }
+}
+.mtl-banner {
+  background-image: url(../images/banner-mtl.webp);
+}
+.building-banner {
+  background-image: url(../images/glassbuildings.png);
 }
 .main-banner {
   position: relative;
@@ -438,6 +448,10 @@ section {
 .mid-blue-bg.offset-bg:before {
   background-color: var(--bg-mid-blue) !important;
 }
+.primary-bg.offset-bg:before {
+  background-color: var(--bg) !important;
+}
+
 
 /* Building background banner */
 .building-bg {
@@ -680,3 +694,15 @@ main {
   opacity: 1;
   visibility: visible;
 }
+
+/* Markets **/
+#marketCategories {
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+#marketCategories > div {
+ width: 110px;
+}
+#marketCategories > div > h4 {
+  font-size: 1.1rem;
+ }
