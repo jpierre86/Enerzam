@@ -11,6 +11,7 @@
   --bg-light-blue: #65b5cf;
   --bg-lighter-blue: #d4eef6;
   --bg-mid-blue: #7595a5;
+  --bg-bright-blue: #5189b1;
   --bg-green: #8dac6f;
   --bg-gray: #e0e0e0;
   --bg-yellow: #fdfbf6;
@@ -110,6 +111,7 @@ object {
   display: block;
   position: relative;
   width: fit-content;
+  height: fit-content;
   margin-top: 1rem;
   border-radius: 5px;
   color: #ffffff;
@@ -202,6 +204,10 @@ section {
   background: var(--bg-mid-blue);
   color: #fff;
 }
+.bright-blue-bg {
+  background: var(--bg-bright-blue);
+  color: #fff;
+}
 .yellow-bg {
   background: var(--bg-yellow);
   color: #000;
@@ -239,6 +245,9 @@ section {
 }
 .flex-center {
   justify-content: center;
+  align-items: center;
+}
+.align-center {
   align-items: center;
 }
 .space-around {
@@ -406,6 +415,9 @@ section {
 .building-banner {
   background-image: url(../images/glassbuildings.png);
 }
+.engineering-bg {
+  background-image: url(../images/engineer-bg.png);
+}
 .main-banner {
   position: relative;
   height: 800px;
@@ -450,6 +462,9 @@ section {
 }
 .primary-bg.offset-bg:before {
   background-color: var(--bg) !important;
+}
+.bright-blue-bg.offset-bg:before {
+  background-color: var(--bg-bright-blue) !important;
 }
 
 
@@ -706,3 +721,58 @@ main {
 #marketCategories > div > h4 {
   font-size: 1.1rem;
  }
+.markets-section.big {
+  height: 700px;
+}
+.markets-section.small {
+  height: 450px;
+}
+.markets-section > div {
+  height: 100%;
+  max-width: 60%;
+  padding: 4rem 1rem 0 4rem;
+}
+.markets-section > img {
+  max-width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+.markets-section h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.markets-section h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.markets-section p {
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 900px) {
+  .markets-section.big, .markets-section.small {
+    height: unset;
+  }
+  .markets-section > div {
+    max-width: 95%;
+    padding: 1rem;
+  }
+  .markets-section > img {
+    max-width: 95%;
+  }
+}
+.markets-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2rem;
+  padding: 1rem;
+}
+.markets-contact .txt {
+  max-width: 700px;
+}
+.markets-contact .btn {
+  padding: 0.7rem 2rem;
+}
