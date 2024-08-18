@@ -81,7 +81,8 @@ footer .footer-block p {
   max-width: 5rem;
 }
 .uclogo {
-  height: 30px !important;
+  height: 70px !important;
+  width: auto;
 }
 .copyright p {
   font-size: 0.7rem;
