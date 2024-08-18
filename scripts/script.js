@@ -112,6 +112,9 @@ for (let i = 0; i < teamCards.length; i++) {
   });
 }
 
+/**
+ * Show hide team member cards
+ */
 window.addEventListener('click', () => {
   for (let i = 0; i < teamCards.length; i++) {
       if (cardOpen && openCardIndex == i) {
@@ -124,6 +127,9 @@ window.addEventListener('click', () => {
   }
 })
 
+/**
+ * Product slides
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const menuContainer = document.getElementById('slide-menu');
   const menuItems = menuContainer.getElementsByClassName('menu-item');
@@ -150,6 +156,40 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 })
+
+/**
+ * Determine which product to show
+ */
+function chooseProduct() {
+
+  const slides = document.getElementsByClassName('slide')
+  const menuContainer = document.getElementById('slide-menu')
+  const menuItems = menuContainer.getElementsByClassName('menu-item')
+
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const product = urlParams.get('product')
+
+  let activeSlide = 0;
+  if (product == 'websynco') activeSlide = 0
+  else if (product == 'analytix') activeSlide = 1
+  else if (product == 'mv') activeSlide = 2
+
+  console.log(activeSlide);
+
+  for (let i=0; i<slides.length; i++) {
+    if (i != activeSlide) {
+      slides[i].classList.remove('active')
+      menuItems[i].classList.remove('active')
+    }   
+    else {
+      slides[i].classList.add('active')
+      menuItems[i].classList.add('active')
+    }
+  }
+
+
+}
 
 /**
  * 
