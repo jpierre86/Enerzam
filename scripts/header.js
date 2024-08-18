@@ -10,6 +10,27 @@ const setColorHeader = () => {
 }
 if (mainHeader.classList.contains('white-logo')) setWhiteHeader()
 
+// Get all the header items in the main header
+const desktopHeader = document.getElementById("desktopNav");
+const headerItems = desktopHeader.getElementsByClassName("main-item");
+const mobileNav = document.getElementById("mobileNav");
+const mobileHeaderItems = mobileNav.getElementsByClassName("main-item");
+
+// Find the active header item 
+const headerClasses = mainHeader.classList
+if (headerClasses.contains('about')) {
+  headerItems[0].className += " active-header";
+  mobileHeaderItems[0].className += " active-mobile-header";
+}
+else if (headerClasses.contains('tech')) {
+  headerItems[1].className += " active-header";
+  mobileHeaderItems[1].className += " active-mobile-header";
+} 
+else if (headerClasses.contains('eng')) {
+  headerItems[2].className += " active-header";
+  mobileHeaderItems[2].className += " active-mobile-header";
+} 
+
 // Hiding the header on scroll
 let lastScrollTop = 0;
 const header = document.getElementById("headerContainer");
@@ -39,27 +60,12 @@ document.addEventListener("scroll", () => {
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 });
 
-// Get all the header items in the main header
-const desktopHeader = document.getElementById("desktopNav");
-const headerItems = desktopHeader.getElementsByClassName("header-item");
-// Loop through the buttons and add the active class to the current/clicked button
-for (let i = 0; i < headerItems.length; i++) {
-  headerItems[i].addEventListener("click", function() {
-    const actives = document.getElementsByClassName("active-header");
-    for (let j = 0; j < actives.length; j++) {
-      console.log(actives[j]);
-      actives[j].classList.remove("active-header");
-    }
-    this.className += " active-header";
-  });
-}
 
 
 //Showing and hiding the mobile hamburger menu
 let mobileNavOpen = false;
 const openMenu = document.getElementById("hamburgerMenu");
 const closeMenu = document.getElementById("closeMenu");
-const mobileNav = document.getElementById("mobileNav");
 
 const mobileNavStyles = window.getComputedStyle(mobileNav);
 
@@ -72,20 +78,6 @@ closeMenu.addEventListener("click", closeMobileNav);
 function closeMobileNav() {
   mobileNav.classList.remove('open-nav');
   mobileNavOpen = false;
-}
-
-// Get all the header items in the mobile header
-const mobileHeaderItems = mobileNav.getElementsByClassName("header-item");
-// Loop through the buttons and add the active class to the current/clicked button
-for (let i = 0; i < mobileHeaderItems.length; i++) {
-  mobileHeaderItems[i].addEventListener("click", function() {
-    const actives = document.getElementsByClassName("active-mobile-header");
-    for (let j = 0; j < actives.length; j++) {
-      console.log(actives[j]);
-      actives[j].classList.remove("active-mobile-header");
-    }
-    this.className += " active-mobile-header";
-  });
 }
 
 //Close the mobile nav if the window is resized 

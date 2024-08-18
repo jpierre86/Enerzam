@@ -13,7 +13,7 @@
 </head>
 <body>
   
-  <div id="header" class="black-txt" ></div>
+  <div id="header" class="black-txt about" ></div>
 
   <div id="banner" class="main-banner full-width grid-center">
     <div class="page-width">
@@ -41,7 +41,9 @@
     </section> 
     <section id="vision" class="full-width grid-center primary-bg">
       <div class="page-width fade-in center-txt">
-        <h2 class="slide-in-left">Our Vision</h2>
+        <div class="grid-center">
+          <h2 class="slide-in-left tagline tagline-blue">Our Vision</h2>
+        </div>
         <div>
           <p class="slide-in-up">At EnerZam, we seamlessly integrate building engineering expertise with cutting-edge software development to deliver innovative, industry-leading solutions. Our commitment to excellence and continuous improvement has led to the establishment of a dedicated technology division, specializing in intelligent and adaptive software systems.</p>
           <p class="slide-in-up">Our modular and scalable approach allows us to tailor bespoke software solutions that precisely address each client's unique requirements. By leveraging our passion for innovation and unwavering dedication to quality, we empower organizations to streamline their operations and achieve ambitious energy reduction goals. With EnerZam as your partner, you'll unlock new levels of efficiency and sustainability in your building management processes.</p>
@@ -51,7 +53,7 @@
     <section id="team" class="full-width grid-center primary-bg">
       <div class="page-width grid-center fade-in">
         <h2 class="slide-in-left tagline tagline-blue">Our Team</h2>
-        <div class="team-grid">
+        <div class="team-grid gap-1">
           <div class="card">
             <img src="/assets/images/noimg.png" alt="Team Member" title="Team Member">
             <div class="">
@@ -198,9 +200,32 @@
         </div>    
       </div>
     </section>
-    <section class="full-width grid-center secondary-bg">
+    <section id="contact" class="full-width grid-center secondary-bg">
+      <div class="page-width">
+        <h2>Contact Us</h2>
+          <form 
+          method="POST"
+          name="contact_form"
+          id="contact_form" 
+          class="grid-center gap full-width grid-2-col" >
+          <input type="hidden" name="subject" value="Enerzam Contact Form Submission" />
+          <div class="input-group">
+              <label for="clientName">Name</label>
+              <input type="text" id="clientName" name="clientName" required>
+          </div>
+          <div class="input-group">
+              <label for="clientEmail">Email</label>
+              <input type="text" id="clientEmail" name="email" required>
+          </div>
+          <div class="input-group grid-col-span-2">
+              <label for="messageInput">Message</label>
+              <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
+          </div> 
+          <input class="btn big-btn submit-btn grid-col-1-span-1 dark-gray-bg" type="submit" name="submitForum" id="submitForum"> 
+        </form>
+      </div>
       <div class="page-width invert-txt fade-in">
-        <h2>Our Locations</h2><br />
+        <h2 class="center-txt">We are located in 2 areas</h2><br />
         <div class="full-width grid-center">
           <div class="full-width flex-wrap gap-1 map-container">
             <div class="flex-wrap gap-1 map">

@@ -17,6 +17,9 @@ header{
   width: 100%;
   padding: 0 var(--left-right-padding);
 }
+header .logo {
+  transform: translateX(-15px);
+}
 .logo {
   max-width: 100%;
   width: auto;
@@ -75,23 +78,21 @@ header{
   padding-bottom: 0.9rem;
   transition: .2s ease;
 }
-.header-nav .active-header:after, .header-nav .active-mobile-header:after {
+.header-nav .active-header:after {
   content: '';
   display: block;
   position: absolute;
   background-color: var(--primary-blue);
   height: 3px;
+  margin-top: 0.4rem;
 }
 .header-nav .active-header:after {  
   width: 100%;
 }
-.header-nav .active-mobile-header:after {
-  width: 1rem;
-}
 .header-nav-mobile {
   display: none;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   position: fixed;
   top: 0;
   left: calc(100vw + 50px);
@@ -105,6 +106,18 @@ header{
 .open-nav {
   transform: translateX(calc(-100% - 50px)) !important;
 }
+.header-nav-mobile .main-item {
+  font-size: 1rem;
+  font-weight: 800;
+}
+.sub-items {
+  width: 100%;
+  margin-left: 2rem;
+  border-left: solid 2px var(--primary-blue);
+}
+.sub-items a {
+  padding: 0.3rem 2rem 0.3rem 1rem !important;
+}
 @media screen and (min-width: 900px) {
   .header-nav .header-item:hover {
     color: var(--primary-blue);
@@ -116,7 +129,8 @@ header{
       display: block;
   }
   .header-nav .header-item {
-      padding: 1.2rem 3rem;
+      text-align: left;
+      padding: 1.2rem 2rem;
       color: var(--txt-color);
   }
   .header-nav-desktop {
