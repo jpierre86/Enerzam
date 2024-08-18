@@ -312,6 +312,12 @@ section {
   max-width: fit-content;
   margin-bottom: 3rem;
 }
+.accordion.tagline {
+  margin-bottom: 0;
+}
+p.tagline:after {
+  margin: 1rem 0;
+}
 .tagline:after {
   content: '';
   display: block;
@@ -775,4 +781,91 @@ main {
 }
 .markets-contact .btn {
   padding: 0.7rem 2rem;
+}
+
+/* Building Engineering Section */
+.building-eng-offers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.building-eng-offers aside {
+  height: fit-content;
+  width: 30%;
+  min-width: 350px;
+  position: sticky;
+  top: 20%;
+}
+.building-eng-offers .content-container {
+  width: 60%;
+  min-width: 600px;
+}
+.building-eng-offers aside a {
+  margin-bottom: 1rem;
+}
+.building-eng-offers aside a:hover {
+  color: var(--primary-blue);
+}
+.reset-arrow {
+  position: sticky;
+  bottom: 100px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .building-eng-offers aside {
+    display: none;
+  }
+  .building-eng-offers aside a {
+    padding: 0 2rem;
+  }
+  .building-eng-offers .content-container {
+    width: 95%;
+    min-width: unset;
+  }
+}
+
+/* accordion section styles */
+.accordion-cont {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.accordion {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.accordion-header {
+  position: relative;
+}
+.accordion-header:after {
+  content: url(/assets/images/icons/arrow_black.svg);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 2rem;
+  width: 2rem;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.accordion-content {
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.open-accordion .accordion-header:after {
+  -webkit-transform: translateY(-50%) rotate(0);
+      -ms-transform: translateY(-50%) rotate(0);
+          transform: translateY(-50%) rotate(0);
+}
+.open-accordion .accordion-content {
+  max-height: 700px !important;
 }

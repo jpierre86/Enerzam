@@ -150,3 +150,29 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 })
+
+/**
+ * 
+ * Functionality for the accordion section
+ * 
+ */
+const accordions = document.getElementsByClassName('accordion');
+let openAccordion;
+
+for (let i=0; i < accordions.length; i++) {
+
+  accordions[i].addEventListener('click', function() {
+    if (openAccordion == null) {
+      openAccordion = this;
+    }
+    else if (this != openAccordion) {
+      openAccordion.classList.toggle("open-accordion");
+      openAccordion = this;
+    }   
+    else {
+      openAccordion = null;
+    }
+    this.classList.toggle("open-accordion");   
+  })
+
+}
