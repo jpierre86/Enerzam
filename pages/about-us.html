@@ -53,7 +53,7 @@
     <section id="team" class="full-width grid-center primary-bg">
       <div class="page-width grid-center fade-in">
         <h2 class="slide-in-left tagline tagline-blue">Our Team</h2>
-        <div class="team-grid gap-1">
+        <div class="team-grid gap-3">
           <div class="card">
             <img src="/assets/images/noimg.png" alt="Team Member" title="Team Member">
             <div class="">
@@ -201,57 +201,59 @@
       </div>
     </section>
     <section id="contact" class="full-width grid-center secondary-bg">
-      <div class="page-width">
-        <h2>Contact Us</h2>
-          <form 
-          method="POST"
-          name="contact_form"
-          id="contact_form" 
-          class="grid-center gap full-width grid-2-col" >
-          <input type="hidden" name="subject" value="Enerzam Contact Form Submission" />
-          <div class="input-group">
-              <label for="clientName">Name</label>
-              <input type="text" id="clientName" name="clientName" required>
-          </div>
-          <div class="input-group">
-              <label for="clientEmail">Email</label>
-              <input type="text" id="clientEmail" name="email" required>
-          </div>
-          <div class="input-group grid-col-span-2">
-              <label for="messageInput">Message</label>
-              <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
-          </div> 
-          <input class="btn big-btn submit-btn grid-col-1-span-1 dark-gray-bg" type="submit" name="submitForum" id="submitForum"> 
-        </form>
-      </div>
-      <div class="page-width invert-txt fade-in">
-        <h2 class="center-txt">We are located in 2 areas</h2><br />
-        <div class="full-width grid-center">
-          <div class="full-width flex-wrap gap-1 map-container">
-            <div class="flex-wrap gap-1 map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4703.309320624052!2d-73.55866579411814!3d45.4979094523694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91af599e5d643%3A0xe4e5006618761b7b!2sEnerZam!5e0!3m2!1sen!2sca!4v1719679308761!5m2!1sen!2sca" width="220" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="slide-in-left"></iframe>
-              <div class="map-text slide-in-up">
-                <h3>Montréal</h3>
-                <div class="highlight yellow">
-                  <p>Cité du multimédia<br>50 Queen St, Suite #204<br>Montreal, QC<br>Canada, H3C 2N5</p>
-                  <p class="phone">+1 (514) 360-9926</p>
-                  <p class="phone">+1 (877) 682-8749</p>
+      <div class="page-width flex-wrap flex-center gap-3">
+        <div id="contactForm" class="page-width">
+          <h2>Contact Us</h2>
+            <form 
+            method="POST"
+            name="contact_form"
+            id="contact_form" 
+            class="grid-center gap full-width grid-2-col" >
+            <input type="hidden" name="subject" value="Enerzam Contact Form Submission" />
+            <div class="input-group">
+                <label for="clientName">Name</label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+            <div class="input-group">
+                <label for="clientEmail">Email</label>
+                <input type="text" id="clientEmail" name="email" required>
+            </div>
+            <div class="input-group grid-col-span-2">
+                <label for="messageInput">Message</label>
+                <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
+            </div> 
+            <input class="btn big-btn submit-btn grid-col-1-span-1 dark-gray-bg" type="submit" name="submitForum" id="submitForum"> 
+          </form>
+        </div>
+        <div class="invert-txt fade-in">
+          <h2 class="center-txt">We are located in 2 areas</h2><br />
+          <div class="full-width grid-center">
+            <div class="full-width flex-wrap gap-1 map-container small-maps">
+              <div class="flex-wrap gap-1 map">
+                <div class="map-text slide-in-up">
+                  <h3>Montréal</h3>
+                  <div class="highlight yellow">
+                    <p>Cité du multimédia<br>50 Queen St, Suite #204<br>Montreal, QC<br>Canada, H3C 2N5</p>
+                    <p class="phone">+1 (514) 360-9926</p>
+                    <p class="phone">+1 (877) 682-8749</p>
+                  </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4703.309320624052!2d-73.55866579411814!3d45.4979094523694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91af599e5d643%3A0xe4e5006618761b7b!2sEnerZam!5e0!3m2!1sen!2sca!4v1719679308761!5m2!1sen!2sca" width="220" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="slide-in-left"></iframe>
+              </div>
+              <div class="flex-wrap gap-1 map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6853.76989718465!2d-79.41505046211965!3d43.75925499359098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d66a2399cc3%3A0x83d385b78bcda196!2s45%20Sheppard%20Ave%20E%2C%20North%20York%2C%20ON%20M2N%205W9!5e0!3m2!1sen!2sca!4v1719679578685!5m2!1sen!2sca" width="220" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="slide-in-left"></iframe>
+                <div class="map-text slide-in-up">
+                  <h3>Toronto</h3>
+                  <div class="highlight yellow">
+                    <p>45 Sheppard Ave East, Suite #930<br>Toronto, ON<br>Canada, M2N 5W9</p>
+                    <p class="phone">+1 (416) 901-9942</p>
+                    <p class="phone">+1 (877) 682-8749</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="flex-wrap gap-1 map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6853.76989718465!2d-79.41505046211965!3d43.75925499359098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d66a2399cc3%3A0x83d385b78bcda196!2s45%20Sheppard%20Ave%20E%2C%20North%20York%2C%20ON%20M2N%205W9!5e0!3m2!1sen!2sca!4v1719679578685!5m2!1sen!2sca" width="220" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="slide-in-left"></iframe>
-              <div class="map-text slide-in-up">
-                <h3>Toronto</h3>
-                <div class="highlight yellow">
-                  <p>45 Sheppard Ave East, Suite #930<br>Toronto, ON<br>Canada, M2N 5W9</p>
-                  <p class="phone">+1 (416) 901-9942</p>
-                  <p class="phone">+1 (877) 682-8749</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>        
+          </div>        
+        </div>
       </div>
     </section>  
   </main>
