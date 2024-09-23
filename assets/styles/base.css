@@ -95,6 +95,9 @@ img {
   height: auto;
   width: 100%;
 }
+ul li {
+  margin-left: 1rem;
+}
 .italic {
   font-style: italic;
 }
@@ -413,7 +416,7 @@ p.tagline:after {
 }
 .bullet:before {
   content: '';
-  background-image: url(/assets/images/icons/bullets.png);
+  background-image: url(/assets/images/icons/bullets.svg);
   display: block;
   background-size: 1.2rem 1.2rem;
   height: 1.2rem;
@@ -422,7 +425,7 @@ p.tagline:after {
   margin-right: 0.8rem;
 }
 .bullet-blue:before {
-  background-image: url(/assets/images/icons/bullet-blue.png);
+  background-image: url(/assets/images/icons/bullet-blue.svg);
 }
 
 /* Banner styles */
@@ -574,16 +577,34 @@ main {
   display: block;
 }
 @media screen and (max-width: 768px) {
-  .map {
+  .map:not(.no-reverse) {
     flex-direction: column-reverse;
     width: 100%;
+  }
+  .map-1 { 
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .map-1 .map-text {
+    text-align: right;
+  }
+  .map-1 .phone {
+    justify-content: flex-end;
+  }
+  .map-1 .highlight {
+    left: unset !important;
+    right: 0.6rem; 
+  }
+  .map-1 .highlight:before {
+    right: -0.6rem;
+    left: unset !important;
   }
   .map iframe {
     width: 100%;
     max-width: 350px;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .map-container {
     justify-content: space-around;
   }
@@ -616,7 +637,9 @@ main {
   min-width: 40%;
   max-width: 600px;
 }
-
+.img-w-txt .sml-txt {
+  max-width: 300px;
+}
 .img-w-txt-3 img {
   width: 100%;
   height: auto;
@@ -881,11 +904,11 @@ main {
   width: 30%;
   min-width: 350px;
   position: sticky;
-  top: 20%;
+  top: 30%;
   font-size: 0.8rem;
 }
-.building-eng-offers object {
-  margin-top: 4rem;
+.building-eng-offers object:not(:first-of-type) {
+  margin-top: 3rem;
 }
 .building-eng-offers .content-container {
   width: 60%;
