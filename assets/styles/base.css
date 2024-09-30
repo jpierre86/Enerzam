@@ -176,6 +176,21 @@ section {
   max-width: var(--page-width-small);
   padding: 0 var(--left-right-padding);
 }
+.side-by-side-sections {
+  display: flex;
+}
+.side-by-side-sections > section {
+  width: calc(var(--page-width) * 0.5);
+  padding: 0 var(--left-right-padding);
+}
+@media screen and (max-width: 900px) {
+  .side-by-side-sections {
+    display: block;
+  }
+  .side-by-side-sections > section {
+    max-width: min(var(--page-width), 100vw);
+  }
+}
 .primary-bg {
   background: var(--bg);
   color: var(--txt-color) !important;
@@ -816,6 +831,7 @@ main {
   min-width: 350px;
   position: sticky;
   top: 20%;
+  z-index: 3;
 }
 .building-eng-offers .content-container {
   width: 60%;
@@ -827,10 +843,14 @@ main {
 .building-eng-offers aside a:hover {
   color: var(--primary-blue);
 }
-.reset-arrow {
-  position: sticky;
-  bottom: 100px;
-  z-index: 0;
+.scroll-top-cont {
+  position: absolute;
+  right: 40px;
+  bottom: -100px;
+  padding-bottom: 3rem;
+}
+.scroll-top {
+  height: 2.5rem;
 }
 
 @media screen and (max-width: 1000px) {
