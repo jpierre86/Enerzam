@@ -38,6 +38,10 @@
   height: 3rem;
   width: 3rem;
   background-image: url(../images/icons/arrow_black.svg);
+  visibility: hidden;
+}
+.slider-arrow:hover .arrow {
+  visibility: visible;
 }
 .slider-prev {
   transform: translateY(-50%) rotate(90deg);

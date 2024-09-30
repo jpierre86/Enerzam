@@ -36,6 +36,11 @@ let lastScrollTop = 0;
 const header = document.getElementById("headerContainer");
 const headerStyles = window.getComputedStyle(header);
 
+let isWhiteTxt = false
+if (mainHeader.classList.contains('invert-txt')) {
+  isWhiteTxt = true
+}
+
 document.addEventListener("scroll", () => {
   const currentScrollTop = window.scrollY;
   if (currentScrollTop > lastScrollTop) {  // User is scrolling down
@@ -46,12 +51,14 @@ document.addEventListener("scroll", () => {
     if (lastScrollTop == 0)  {
       setTimeout(() => {header.classList.add('header-background')}, 300)
     }
+    header.classList.add('invert-txt')
     setWhiteHeader()
     if (mobileNavOpen) openMobileNav(); //Close mobile nav
   } 
   else {   // User is scrolling up
     if (currentScrollTop == 0) {
-      header.classList.remove('header-background');    
+      header.classList.remove('header-background');  
+      if (!isWhiteTxt) header.classList.remove('invert-txt')  
       setColorHeader();
     }
     else if (currentScrollTop - lastScrollTop > -200) return; //Only show the header after a minimum scroll up

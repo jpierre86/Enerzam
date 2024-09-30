@@ -131,6 +131,7 @@ window.addEventListener('click', () => {
  * Product slides
  */
 document.addEventListener('DOMContentLoaded', function() {
+  const productCont = document.getElementById('products')
   const menuContainer = document.getElementById('slide-menu');
   const menuItems = menuContainer.getElementsByClassName('menu-item');
   const slides = document.getElementsByClassName('slide');
@@ -153,6 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
           // Show the corresponding slide with a fade-in effect
           const slideId = this.getAttribute('data-slide');
           document.getElementById(slideId).classList.add('active');
+
+          // Show a white bg for the second slide
+          if (slideId == 'slide-1') 
+            productCont.classList.add('white-bg')
+          else 
+            productCont.classList.remove('white-bg')
       });
   }
 })
@@ -162,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function chooseProduct() {
 
+  const productCont = document.getElementById('products')
   const slides = document.getElementsByClassName('slide')
   const menuContainer = document.getElementById('slide-menu')
   const menuItems = menuContainer.getElementsByClassName('menu-item')
@@ -175,7 +183,10 @@ function chooseProduct() {
   else if (product == 'analytix') activeSlide = 1
   else if (product == 'mv') activeSlide = 2
 
-  console.log(activeSlide);
+  if (activeSlide == 1) 
+    productCont.classList.add('white-bg')
+  else 
+    productCont.classList.remove('white-bg')
 
   for (let i=0; i<slides.length; i++) {
     if (i != activeSlide) {
