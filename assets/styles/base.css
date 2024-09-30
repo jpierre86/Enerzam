@@ -11,7 +11,7 @@
   --bg-light-blue: #65b5cf;
   --bg-lighter-blue: #d4eef6;
   --bg-mid-blue: #7595a5;
-  --bg-bright-blue: #5189b1;
+  --bg-bright-blue: #0E8BB5;
   --bg-green: #8dac6f;
   --bg-gray: #e0e0e0;
   --bg-yellow: #fdfbf6;
@@ -21,6 +21,7 @@
   --primary-blue: #14BCF4;
   --text-blue: #5268a7;
   --primary-gray: #454545;
+  --markets-bg: #F8FAFAFA;
   --txt-color: #000;
   --txt-focus: #000;
   --heading-font: "Poppins", sans-serif;
@@ -76,6 +77,9 @@ h2.large {
   color: #706f6e;
 }
 @media screen and (max-width: 490px) {
+  h1.shrink {
+    font-size: 1.8rem;
+  }
   h2.shrink {
     font-size: 1.15rem;
     line-height: 1.4rem;
@@ -203,6 +207,9 @@ section {
   padding: 0 var(--left-right-padding);
 }
 @media screen and (max-width: 900px) {
+  .sml-section-mobile {
+    padding: 1rem 0;
+  }
   .side-by-side-sections {
     display: block;
   }
@@ -217,6 +224,9 @@ section {
 .secondary-bg {
   background: var(--bg-blue);
   color: #fff;
+}
+.markets-bg {
+  background-color: var(--markets-bg);
 }
 .gray-bg {
   background: var(--bg-gray);
@@ -303,6 +313,9 @@ section {
   .reverse-mobile {
     flex-direction: column-reverse;
     gap: 1rem;
+  }
+  .center-txt.left-mobile {
+    text-align: left;
   }
 }
 @media screen and (max-width: 425px) {
@@ -404,8 +417,8 @@ p.tagline:after {
 }
 .fancy-div {
   border: solid 4px #40569e;
-  padding: 2rem;
-  margin: 0 2rem;
+  padding: 3rem 2rem;
+  margin: 0 1rem;
   position: relative;
 }
 .fancy-div h2 {
@@ -424,6 +437,7 @@ p.tagline:after {
   position: relative;
   font-size: 0.8rem;
   margin-bottom: 0.6rem;
+  margin-left: 1.5rem;
   z-index: 1;
 }
 .txt-blue {
@@ -436,8 +450,8 @@ p.tagline:after {
   background-size: 1.2rem 1.2rem;
   height: 1.2rem;
   width: 1.2rem;    
-  float: left;
-  margin-right: 0.8rem;
+  position: absolute;
+  left: -1.5rem;
 }
 .bullet-blue:before {
   background-image: url(/assets/images/icons/bullet-blue.svg);
@@ -521,6 +535,9 @@ p.tagline:after {
 }
 .primary-bg.offset-bg:before {
   background-color: var(--bg) !important;
+}
+.white-bg.offset-bg:before {
+  background-color: #fff !important;
 }
 .bright-blue-bg.offset-bg:before {
   background-color: var(--bg-bright-blue) !important;
@@ -789,8 +806,8 @@ main {
 }
 
 .iso {
-  height: 90px !important;
-  width: 90px !important;
+  height: 100px !important;
+  width: 100px !important;
   margin-right: 1rem;
 }
 
@@ -846,10 +863,10 @@ main {
   align-items: flex-start;
   margin-top: 3rem;
 }
-#marketCategories > div {
+#marketCategories > a {
  width: 110px;
 }
-#marketCategories > div > h4 {
+#marketCategories > a > h4 {
   font-size: 1.1rem;
  }
 .markets-section.big {
@@ -892,6 +909,11 @@ main {
     max-width: 95%;
   }
 }
+@media screen and (max-width: 485px) {
+  #marketCategories > a {
+    width: 100%;
+  }
+}
 .markets-contact {
   display: flex;
   flex-wrap: wrap;
@@ -905,13 +927,14 @@ main {
   max-width: 700px;
 }
 .markets-contact .btn {
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 3rem 0.7rem 1rem;
 }
 
 /* Building Engineering Section */
 .building-eng-offers {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 4rem;
 }
 .building-eng-offers aside {
@@ -935,6 +958,10 @@ main {
 .building-eng-offers aside a:hover {
   color: var(--primary-blue);
 }
+#top {
+  margin-bottom: 3rem;
+}
+
 .scroll-top-cont {
   position: absolute;
   right: 40px;
@@ -943,11 +970,30 @@ main {
 }
 .scroll-top {
   height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#markets-top.scroll-top-cont {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  padding: 0;
+  z-index: 2;
+}
+#top-markets {
+  position: relative;
+  z-index: 3;
 }
 
 @media screen and (max-width: 1100px) {
+  .building-eng-offers {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .building-eng-offers aside {
-    display: none;
+    position: relative;
+    text-align: center;
   }
   .building-eng-offers aside a {
     padding: 0 2rem;
@@ -955,6 +1001,16 @@ main {
   .building-eng-offers .content-container {
     width: 95%;
     min-width: unset;
+  }
+  #top {
+    margin-bottom: unset;
+  }
+  .scroll-top-cont {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding: 0;
+    z-index: 2;
   }
 }
 
@@ -1001,6 +1057,11 @@ main {
 }
 .open-accordion .accordion-content {
   max-height: 700px !important;
+}
+
+.raise-z {
+  z-index: 5;
+  position: relative;
 }
 
 /* form styles */

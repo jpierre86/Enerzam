@@ -1,14 +1,30 @@
 // White vs Color header
 const mainHeader = document.getElementById('header')
 const headerLogo = document.getElementById('headerLogo')
+const openMenu = document.getElementById("hamburgerMenu");
+const closeMenu = document.getElementById("closeMenu");
+
 const setWhiteHeader = () => {
   headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-white_en.svg')
+  openMenu.style.background = 'url(/assets/images/icons/hamburger.svg) no-repeat center'
 }
 const setColorHeader = () => {
   if (mainHeader.classList.contains('white-logo')) return
   headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-color_en.svg')
 }
+const setBlackHB = () => {
+  openMenu.style.background = 'url(/assets/images/icons/hamburger_black.svg) no-repeat center'
+}
+const setWhiteHB = () => {
+  openMenu.style.background = 'url(/assets/images/icons/hamburger.svg) no-repeat center'
+}
 if (mainHeader.classList.contains('white-logo')) setWhiteHeader()
+
+let blackbg = false
+if (mainHeader.classList.contains('black-bg')) {
+  setBlackHB()
+  blackbg = true
+}
 
 // Get all the header items in the main header
 const desktopHeader = document.getElementById("desktopNav");
@@ -53,12 +69,14 @@ document.addEventListener("scroll", () => {
     }
     header.classList.add('invert-txt')
     setWhiteHeader()
+    setWhiteHB()
     if (mobileNavOpen) openMobileNav(); //Close mobile nav
   } 
   else {   // User is scrolling up
     if (currentScrollTop == 0) {
       header.classList.remove('header-background');  
       if (!isWhiteTxt) header.classList.remove('invert-txt')  
+      if (blackbg) setBlackHB()
       setColorHeader();
     }
     else if (currentScrollTop - lastScrollTop > -200) return; //Only show the header after a minimum scroll up
@@ -71,9 +89,6 @@ document.addEventListener("scroll", () => {
 
 //Showing and hiding the mobile hamburger menu
 let mobileNavOpen = false;
-const openMenu = document.getElementById("hamburgerMenu");
-const closeMenu = document.getElementById("closeMenu");
-
 const mobileNavStyles = window.getComputedStyle(mobileNav);
 
 openMenu.addEventListener("click", openMobileNav); 

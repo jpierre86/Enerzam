@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
           document.getElementById(slideId).classList.add('active');
 
           // Show a white bg for the second slide
-          if (slideId == 'slide-1') 
+          if (slideId == 'slide-1' || slideId == 'slide-2') 
             productCont.classList.add('white-bg')
           else 
             productCont.classList.remove('white-bg')
