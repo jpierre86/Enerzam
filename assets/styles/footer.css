@@ -1,6 +1,6 @@
 /* Footer Styles */
 #footer-container {
-  padding: 6rem 0 !important;
+  padding: 5rem 0 2rem 0 !important
 }
 footer {
   grid-template-columns: auto auto auto auto;
@@ -74,22 +74,8 @@ footer .footer-block p {
 .copyright {
   position: relative;
 }
-@media screen and (max-width: 767px) {
-  .uclogo-container {
-    left: 1rem;
-    bottom: 4rem !important;
-  }
-  #footer-container {
-    padding: 8rem 0 !important;
-  }
-}
-.uclogo-container {
-  position: absolute;
-  right: 1rem;
-  bottom: 2rem;
-}
 .uclogo {
-  height: 85px !important;
+  height: 100px !important;
   width: auto;
 }
 .copyright p {
