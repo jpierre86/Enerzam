@@ -56,27 +56,49 @@ try {
   const prevSlider = document.getElementById('prevSlider');
   const nextSlider = document.getElementById('nextSlider');
 
-  prevSlider.addEventListener('click', () => {
-    
+  let autoScrollInterval;
+
+  // Function to handle the auto-scrolling
+  const autoScroll = () => {
     if (screen.width < 768)
-      slider.scrollLeft = slider.scrollLeft - (screen.width/2);
+      slider.scrollLeft = slider.scrollLeft + (screen.width / 2);
     else
-      slider.scrollLeft = slider.scrollLeft - (screen.width/4);
-    
+      slider.scrollLeft = slider.scrollLeft + (screen.width / 4);
+
+    // Reset to start if at the end
+    if (slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth)) {
+      slider.scrollLeft = 0;
+    }
+  };
+
+  // Start auto-scrolling every 3 seconds
+  autoScrollInterval = setInterval(autoScroll, 3000);
+
+  // Pause auto-scroll when user interacts with the arrows
+  prevSlider.addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Pause auto-scroll
+    if (screen.width < 768)
+      slider.scrollLeft = slider.scrollLeft - (screen.width / 2);
+    else
+      slider.scrollLeft = slider.scrollLeft - (screen.width / 4);
+
     if (slider.scrollLeft == 0)
       slider.scrollLeft += slider.scrollWidth - slider.clientWidth;
 
+    autoScrollInterval = setInterval(autoScroll, 3000); // Restart auto-scroll after interaction
   });
-  nextSlider.addEventListener('click', () => {
 
+  nextSlider.addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Pause auto-scroll
     if (screen.width < 768)
-      slider.scrollLeft = slider.scrollLeft + (screen.width/2);
+      slider.scrollLeft = slider.scrollLeft + (screen.width / 2);
     else
-      slider.scrollLeft = slider.scrollLeft + (screen.width/4);
+      slider.scrollLeft = slider.scrollLeft + (screen.width / 4);
 
     if (slider.scrollLeft == (slider.scrollWidth - slider.clientWidth))
       slider.scrollLeft -= slider.scrollLeft;
-    
+
+    autoScrollInterval = setInterval(autoScroll, 3000); // Restart auto-scroll after interaction
   });
 }
 catch {
@@ -87,15 +109,16 @@ catch {
 /**
  * Functions for animated Our Team section
  */
-const teamCards = document.getElementsByClassName('card')
+const teamCards = document.getElementsByClassName('card');
 let cardOpen = false;
 let openCardIndex = null;
 
+// Open/close card on click
 for (let i = 0; i < teamCards.length; i++) {
   teamCards[i].addEventListener('click', (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // Prevent click from propagating to window click event
     if (!cardOpen) {
-      const current = teamCards[i].getElementsByClassName('info-card')[0]
+      const current = teamCards[i].getElementsByClassName('info-card')[0];
       current.classList.add('show');
       current.classList.remove('hidden');
       cardOpen = true;
@@ -103,7 +126,7 @@ for (let i = 0; i < teamCards.length; i++) {
     } 
     else if (cardOpen && openCardIndex === i) {
       // If clicking the same open card, close it
-      const current = teamCards[i].getElementsByClassName('info-card')[0]
+      const current = teamCards[i].getElementsByClassName('info-card')[0];
       current.classList.remove('show');
       current.classList.add('hidden');
       cardOpen = false;
@@ -112,23 +135,27 @@ for (let i = 0; i < teamCards.length; i++) {
   });
 }
 
-/**
- * Show hide team member cards
- */
-window.addEventListener('click', () => {
-  for (let i = 0; i < teamCards.length; i++) {
-      if (cardOpen && openCardIndex == i) {
-        const current = teamCards[i].getElementsByClassName('info-card')[0]
-        current.classList.remove('show');
-        current.classList.add('hidden');
-        cardOpen = false;
-        openCardIndex = null;
-      }
+// Close modal on any click outside the card or on scrolling
+const closeModal = () => {
+  if (cardOpen) {
+    const current = teamCards[openCardIndex].getElementsByClassName('info-card')[0];
+    current.classList.remove('show');
+    current.classList.add('hidden');
+    cardOpen = false;
+    openCardIndex = null;
   }
-})
+};
+
+// Close modal on click outside
+window.addEventListener('click', closeModal);
+
+// Close modal on scroll
+window.addEventListener('scroll', closeModal);
+
 
 /**
  * Product slides
+ * 
  */
 document.addEventListener('DOMContentLoaded', function() {
   const productCont = document.getElementById('products')

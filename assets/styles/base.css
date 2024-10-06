@@ -437,6 +437,9 @@ p.tagline:after {
   margin: 0;
   background: linear-gradient(to right, #e7e7e7 0%, #ededed 100%);
 }
+.fancy-div > div {
+  max-width: 800px;
+}
 .bullet {
   position: relative;
   font-size: 0.8rem;
