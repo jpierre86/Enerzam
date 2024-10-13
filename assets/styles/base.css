@@ -9,7 +9,7 @@
   --bg: #f0f0f0;
   --bg-blue: #042936;
   --bg-light-blue: #65b5cf;
-  --bg-lighter-blue: #d4eef6;
+  --bg-lighter-blue: #c7eff7;
   --bg-mid-blue: #7595a5;
   --bg-bright-blue: #0E8BB5;
   --bg-green: #8dac6f;
@@ -19,7 +19,7 @@
   --primary-green: #74bc2c;
   --primary-yellow: #c2d84b;
   --primary-blue: #14BCF4;
-  --text-blue: #5268a7;
+  --text-blue: #2353a2;
   --primary-gray: #454545;
   --markets-bg: #F8FAFAFA;
   --txt-color: #000;
@@ -248,6 +248,13 @@ section {
   background: var(--bg-lighter-blue);
   color: #000;
 }
+.bg-blue-overlay {
+  background: rgba(145, 225, 241, 0.9);
+  color: #000;
+}
+.bg-dark-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
 .mid-blue-bg {
   background: var(--bg-mid-blue);
   color: #fff;
@@ -437,8 +444,28 @@ p.tagline:after {
   margin: 0;
   background: linear-gradient(to right, #e7e7e7 0%, #ededed 100%);
 }
+.fancy-div legend {
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 0 4rem;
+}
+@media screen and (max-width: 900px) {
+  .fancy-div legend {
+    padding: 0 1rem;
+  }
+}
 .fancy-div > div {
   max-width: 800px;
+}
+.emphasis-box {
+  padding: 3rem 2rem;
+  margin: 6rem 1rem 0 1rem;
+  border: solid 2px #0e8bb5;
+  line-height: 1.8rem;
+  position: relative;
+}
+.emphasis-box > div {
+  max-width: 600px;
 }
 .bullet {
   position: relative;
@@ -483,7 +510,7 @@ p.tagline:after {
   background-image: url(../images/glassbuildings.png);
 }
 .engineering-bg {
-  background-image: url(../images/engineer-bg.png);
+  background-image: url(../images/engineer-bg.jpg);
 }
 .main-banner {
   position: relative;
@@ -508,7 +535,7 @@ p.tagline:after {
 }
 .banner-text-large {
   max-width: min(750px, 90%);
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 2rem 4rem 2rem 2rem;
 }
 .banner-text-large.even {
@@ -516,7 +543,7 @@ p.tagline:after {
 }
 @media screen and (min-width: 1000px) {
   .banner-content.extend-left {
-    box-shadow: -100vw 0 0 100vmax rgba(0, 0, 0, 0.75);;
+    box-shadow: -100vw 0 0 100vmax rgba(0, 0, 0, 0.8);;
     clip-path: inset(0 -100vmax); 
   }
 }
@@ -579,7 +606,7 @@ p.tagline:after {
   color: #fff;
 }
 .joule-mv-1 {
-  background-image: url(../images/tech_div-joule_mv_section_icons.jpg);
+  background-image: url(../images/tech_div-joule_mv_section_icons_overlay.jpg);
 }
 .joule-mv-2 {
   background-image: url(../images/building-banner.webp);
@@ -657,7 +684,7 @@ main {
 }
 .img-w-txt .sml-img {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   padding: 1.5rem 0;
 }
 .img-w-txt .big-img {
