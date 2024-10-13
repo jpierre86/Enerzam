@@ -523,13 +523,13 @@ p.tagline:after {
   }
 }
 .mtl-banner {
-  background-image: url(../images/banner-mtl.webp);
+  background-image: url(../images/banner-mtl_2_50.webp);
 }
 .building-banner {
-  background-image: url(../images/glassbuildings.png);
+  background-image: url(../images/glassbuildings.webp);
 }
 .engineering-bg {
-  background-image: url(../images/building_engineering_page-hero_overlay.jpg);
+  background-image: url(../images/building_engineering_page-hero_overlay\ \(1\).webp);
 }
 .main-banner {
   position: relative;
